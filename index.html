@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>MD Nwakanma Solar</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">MD Nwakanma <span>Solar</span></div>
@@ -20,46 +22,57 @@
     </div>
   </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero-inner">
-        <h1>Powering Your World with Clean Energy</h1>
-        <p>Affordable solar panels, portable power banks, and reliable CCTV systems.</p>
-        <a href="#products" class="btn primary">Shop Now</a>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <h1>Powering Your World with Clean Energy</h1>
+      <p>Affordable solar panels, portable power banks, and reliable CCTV systems.</p>
+      <a href="#products" class="btn primary">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="container products-section">
+    <h2>Featured Products</h2>
+    <div id="productsGrid" class="grid"></div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container about">
+    <h2>About MD Nwakanma Solar</h2>
+    <p>We provide clean, reliable solar energy solutions to homes and businesses with quality products and exceptional service. Our mission is to make solar energy accessible, affordable, and eco-friendly for everyone.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm" class="form">
+      <label>Name <input type="text" name="name" required></label>
+      <label>Email <input type="email" name="email" required></label>
+      <label>Message <textarea name="message" rows="4" required></textarea></label>
+      <div class="form-actions">
+        <button type="submit" class="btn primary">Send Message</button>
       </div>
-    </section>
+    </form>
+    <div id="contactSuccess" class="notice hidden">Message sent successfully!</div>
+  </section>
 
-    <section id="products" class="container products-section">
-      <h2>Featured Products</h2>
-      <div id="productsGrid" class="grid"></div>
-    </section>
-
-    <section id="about" class="container about">
-      <h2>About MD Nwakanma Solar</h2>
-      <p>We provide clean, reliable solar energy solutions to homes and businesses with quality products and exceptional service.</p>
-    </section>
-
-    <section id="contact" class="container contact">
-      <h2>Contact Us</h2>
-      <form id="contactForm" class="form">
-        <label>Name <input type="text" name="name" required></label>
-        <label>Email <input type="email" name="email" required></label>
-        <label>Message <textarea name="message" rows="4" required></textarea></label>
-        <div class="form-actions">
-          <button type="submit" class="btn primary">Send Message</button>
-        </div>
-      </form>
-      <div id="contactSuccess" class="notice hidden">Message sent successfully!</div>
-    </section>
-  </main>
-
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>© <span id="year"></span> MD Nwakanma Solar</div>
-      <div>Follow: <a href="#">Facebook</a> · <a href="#">Instagram</a></div>
+      <div>Follow: 
+        <a href="#">Facebook</a> · 
+        <a href="#">Instagram</a>
+      </div>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="script.js"></script>
+  <script>
+    // Set current year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
